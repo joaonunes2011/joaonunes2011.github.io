@@ -1,0 +1,561 @@
+
+/* Cores principais */
+:root {
+  --azul: #8dbeeb;
+  --preto: #1e1e1e;
+  --texto: #111;
+  --fundo: #fff;
+  --borda: #1e1e1e;
+  --sombra: #1e1e1e;
+}
+
+/* Cores do modo escuro */
+:root.tema-escuro {
+  --azul: #263746;
+  --preto: #050505;
+  --texto: #f5f5f5;
+  --fundo: #111;
+  --borda: #f5f5f5;
+  --sombra: #000;
+}
+
+/* Configuraçao geral */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+/* Moldura preta externa */
+.moldura {
+  width: min(1193px, 100%);
+  min-height: 735px;
+  margin: 22px auto;
+  padding: 55px 91px 52px;
+  background: var(--preto);
+}
+
+/* Painel azul central */
+.painel {
+  min-height: 583px;
+  padding: 0 38px 24px;
+  position: relative;
+  color: var(--texto);
+  background: var(--azul);
+  border: 1px solid var(--borda);
+}
+
+/* Cabeçalho */
+.cabecalho {
+  min-height: 62px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+}
+
+/* Nome da loja */
+.marca {
+  margin-right: auto;
+  color: inherit;
+  font-size: 20px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Menu de navegação */
+.navegacao {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link {
+  padding: 12px 13px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  font-size: 15px;
+}
+
+.nav-link:hover,
+.nav-link.ativo {
+  border-bottom-color: var(--borda);
+}
+
+/* Pesquisa */
+.busca {
+  width: 272px;
+  height: 30px;
+  display: flex;
+  margin-left: 10px;
+  border: 1px solid var(--borda);
+}
+
+.busca input {
+  width: 100%;
+  min-width: 0;
+  padding: 5px 8px;
+  border: 0;
+  outline: 0;
+  background: transparent;
+}
+
+.busca button {
+  padding: 0 9px;
+  border: 0;
+  border-left: 1px solid var(--borda);
+  background: transparent;
+}
+
+/* Ícones do cabeçalho */
+.atalhos {
+  display: flex;
+  gap: 5px;
+  margin-left: 8px;
+}
+
+.icone {
+  width: 29px;
+  height: 29px;
+  padding: 0;
+  border: 1px solid var(--borda);
+  background: transparent;
+}
+
+/* Título principal */
+.conteudo-principal h1 {
+  margin: 12px 0 18px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.subtitulo {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+/* Grade dos produtos */
+.grade-scooters {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.cartao-scooter {
+  min-width: 0;
+}
+
+/* Imagens das scooters */
+.foto-scooter {
+  height: 201px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 1px solid var(--borda);
+}
+
+.foto-scooter img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Nome dos produtos */
+.cartao-scooter h2 {
+  min-height: 60px;
+  margin: 7px 0;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+/* Link de informações */
+.link-info {
+  padding: 2px 0;
+  border: 0;
+  border-bottom: 1px solid var(--borda);
+  background: transparent;
+  font-size: 13px;
+}
+
+.mensagem-vazia {
+  padding: 18px;
+  text-align: center;
+}
+
+/* Propaganda  */
+.propaganda {
+  height: 162px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 27px 7px 0;
+  border: 1px solid var(--borda);
+  text-align: center;
+}
+
+.propaganda span {
+  margin-bottom: 24px;
+  font-size: 13px;
+}
+
+.propaganda strong {
+  font-size: 19px;
+  font-weight: 400;
+}
+
+.propaganda b {
+  margin-top: 10px;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+/* Lista de tarefas e auxiliar */
+.ferramentas {
+  max-width: 1034px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin: 0 auto 50px;
+}
+
+.bloco-ferramenta {
+  padding: 15px;
+  border: 1px solid var(--borda);
+  background: var(--azul);
+}
+
+.bloco-ferramenta h2 {
+  margin: 0 0 12px;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.linha-form {
+  display: flex;
+  gap: 5px;
+}
+
+.bloco-ferramenta input {
+  flex: 1;
+  min-width: 0;
+  padding: 8px;
+  border: 1px solid var(--borda);
+  background: transparent;
+}
+
+.botao-simples {
+  padding: 7px 10px;
+  border: 1px solid var(--borda);
+  background: transparent;
+}
+
+/* Itens da lista */
+.lista-tarefas {
+  margin: 10px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item-tarefa {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 0;
+  border-bottom: 1px solid #1e1e1e66;
+}
+
+.item-tarefa.concluida .texto-tarefa {
+  text-decoration: line-through;
+}
+
+.remover-tarefa {
+  margin-left: auto;
+  border: 0;
+  background: transparent;
+  font-size: 19px;
+}
+
+/* Conversa do auxiliar */
+.conversa {
+  height: 110px;
+  overflow: auto;
+  margin-bottom: 8px;
+  padding: 8px;
+  border: 1px solid var(--borda);
+  font-size: 13px;
+}
+
+.fala {
+  margin: 4px 0;
+  padding: 6px;
+  border: 1px solid #1e1e1e66;
+}
+
+.fala.usuario {
+  text-align: right;
+}
+
+.aviso-demo {
+  display: block;
+  margin-top: 8px;
+  font-size: 11px;
+}
+
+/* Botão de suporte */
+.botao-suporte-flutuante {
+  position: fixed;
+  z-index: 4;
+  right: 18px;
+  bottom: 18px;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--borda);
+  background: var(--azul);
+  font-size: 20px;
+}
+
+/* Fundo do modal */
+.fundo-modal {
+  position: fixed;
+  z-index: 10;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #0009;
+}
+
+.fundo-modal.aberto {
+  display: flex;
+}
+
+/* Janela modal */
+.janela-modal {
+  position: relative;
+  width: min(820px, 100%);
+  max-height: 88vh;
+  overflow: auto;
+  padding: 24px;
+  border: 2px solid var(--borda);
+  background: var(--azul);
+  color: var(--texto);
+  box-shadow: 0 0 0 12px var(--sombra);
+}
+
+/* Botão de fechar */
+.fechar-modal {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--borda);
+  background: transparent;
+  font-size: 22px;
+}
+
+.janela-modal h2 {
+  margin: 0 45px 15px 0;
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.janela-modal p {
+  line-height: 1.5;
+}
+
+.janela-modal a {
+  color: inherit;
+}
+
+.janela-modal button:not(.fechar-modal) {
+  cursor: pointer;
+}
+
+/* Grade de peças e equipamentos */
+.grade-modal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.cartao-modal {
+  padding: 10px;
+  border: 1px solid var(--borda);
+}
+
+.cartao-modal h3 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.imagem-ilustrativa {
+  min-height: 130px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--borda);
+}
+
+/* detalhes dos produtos */
+.detalhe-produto {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 18px;
+}
+
+.detalhe-produto img {
+  width: 100%;
+  height: 210px;
+  object-fit: contain;
+  border: 1px solid var(--borda);
+}
+
+.detalhe-produto li {
+  margin: 7px 0;
+}
+
+/* Aba de cadastro */
+.campo-cadastro {
+  display: block;
+  margin: 12px 0;
+}
+
+.campo-cadastro input {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px;
+  border: 1px solid var(--borda);
+  background: transparent;
+}
+
+.botao-modal {
+  padding: 9px 16px;
+  border: 1px solid var(--borda);
+  background: transparent;
+}
+
+.nota-rolagem {
+  margin-top: 15px;
+  font-size: 13px;
+}
+
+/* Adaptação pra telas médias */
+@media (max-width: 900px) {
+  .moldura {
+    min-height: 0;
+    margin: 0 auto;
+    padding: 25px 20px;
+  }
+
+  .painel {
+    padding: 0 18px 20px;
+  }
+
+  .cabecalho {
+    min-height: 65px;
+    flex-wrap: wrap;
+  }
+
+  .marca {
+    width: 100%;
+    padding-top: 12px;
+  }
+
+  .navegacao {
+    flex-wrap: wrap;
+  }
+
+  .busca {
+    flex: 1;
+    min-width: 180px;
+  }
+
+  .grade-scooters {
+    gap: 12px;
+  }
+
+  .foto-scooter {
+    height: 160px;
+  }
+}
+
+/* Adaptação para celulares */
+@media (max-width: 600px) {
+  .moldura {
+    padding: 12px;
+  }
+
+  .painel {
+    padding: 0 12px 18px;
+  }
+
+  .cabecalho {
+    gap: 4px;
+  }
+
+  .nav-link {
+    padding: 8px 6px;
+    font-size: 13px;
+  }
+
+  .busca {
+    width: 100%;
+    flex-basis: 100%;
+    margin: 5px 0;
+  }
+
+  .grade-scooters,
+  .ferramentas,
+  .grade-modal,
+  .detalhe-produto {
+    grid-template-columns: 1fr;
+  }
+
+  .foto-scooter {
+    height: 210px;
+  }
+
+  .cartao-scooter h2 {
+    min-height: 0;
+  }
+
+  .propaganda {
+    height: 140px;
+  }
+
+  .ferramentas {
+    margin: 0 12px 30px;
+  }
+
+  .janela-modal {
+    padding: 18px;
+  }
+}

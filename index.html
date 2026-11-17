@@ -1,0 +1,256 @@
+
+<!-- meu link do githhub: https://github.com/joaonunes2011 -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#a5d8ff">
+  <title>Massolini Scooters</title>
+
+  <!-- Conecta o CSS e JavaScript -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Moldura preta e painel azul -->
+  <main class="moldura">
+    <div class="painel" id="inicio">
+
+      <!-- Cabeçalho e menu principal -->
+<header class="cabecalho">
+
+  <a class="marca" href="#inicio" aria-label="Massolini Scooters - início">
+    Massolini scooters
+  </a>
+
+  <nav class="navegacao" aria-label="Navegação principal">
+
+    <button class="nav-link ativo" type="button" data-secao="scooters">
+      scooter elétricas
+    </button>
+
+    <button class="nav-link" type="button" data-secao="pecas">
+      peças
+    </button>
+
+    <button class="nav-link" type="button" data-secao="equipamentos">
+      equipamentos
+    </button>
+
+    <button class="nav-link" type="button" data-secao="menu">
+      menu
+    </button>
+
+  </nav>
+
+</header>
+        <!-- Barra de pesquisa -->
+        <form class="busca" id="formBusca" role="search">
+          <input
+            id="campoBusca"
+            type="search"
+            placeholder="procure sua scooter..."
+            aria-label="Procure sua scooter"
+          >
+          <button type="submit" aria-label="Pesquisar">⌕</button>
+        </form>
+
+        <!-- Botao de acesso rapido -->
+        <div class="atalhos">
+          <button class="icone" type="button" data-acao="suporte" aria-label="Suporte" title="Suporte">!</button>
+
+          <button class="icone" type="button" data-acao="compras" aria-label="Aviso de compras" title="Aviso de compras">🛒</button>
+
+          <button class="icone" type="button" id="botaoTema" aria-label="Ativar modo escuro" title="Modo escuro">◐</button>
+
+          <button class="icone" type="button" data-acao="cadastro" aria-label="Cadastro" title="Cadastro">☻</button>
+        </div>
+
+      </header>
+
+      <!-- Conteudo principal -->
+      <section class="conteudo-principal" aria-labelledby="tituloPrincipal">
+
+        <h1 id="tituloPrincipal">scooters elétricas</h1>
+
+        <p class="subtitulo">sugestão de scooters elétricas :</p>
+
+        <!-- Cartoes das scooters -->
+        <div class="grade-scooters" id="gradeScooters">
+
+          <!-- Scooter 1 -->
+          <article
+            class="cartao-scooter"
+            data-name="scooter elétrica yoyo racing n9 1000w 32km/h bateria removível"
+          >
+            <div class="foto-scooter">
+              <img src="imagens utilizadas/scooter_eltrica_yoyo_racing_n9_1000w_32kmh_bateria_1_20260901173838_606ddd9e8547.webp"
+                alt="Imagem ilustrativa de uma scooter"
+              >
+            </div>
+
+            <h2>
+              Scooter Elétrica Yoyo<br>
+              Racing N9 1000w 32km/h<br>
+              Bateria Removível
+            </h2>
+
+            <button class="link-info" type="button" data-produto="n9">
+              (informações sobre a scooter)
+            </button>
+          </article>
+
+          <!-- Scooter 2 -->
+          <article
+            class="cartao-scooter"
+            data-name="scooter x13 bicicleta elétrica 1000w chopper sem cnh alarme"
+          >
+            <div class="foto-scooter">
+              <img
+                src="imagens utilizadas/images.jpg"
+                alt="Imagem ilustrativa de uma scooter estilo Chopper"
+              >
+            </div>
+
+            <h2>
+              Scooter X13<br>
+              Bicicleta Elétrica 1000w<br>
+              Chopper Sem Cnh Alarme
+            </h2>
+
+            <button class="link-info" type="button" data-produto="x13">
+              (informações sobre a scooter)
+            </button>
+          </article>
+
+          <!-- Scooter 3 -->
+          <article
+            class="cartao-scooter"
+            data-name="scooter elétrica ouxi ft03 48v bateria de lítio"
+          >
+            <div class="foto-scooter">
+              <img
+                src="imagens utilizadas/images 2.jpg"
+                alt="Imagem ilustrativa de uma bicicleta elétrica"
+              >
+            </div>
+
+            <h2>
+              Scooter Elétrica Ouxi - FT03 48V<br>
+              Bateria de Lítio
+            </h2>
+
+            <button class="link-info" type="button" data-produto="ft03">
+              (informações sobre a scooter)
+            </button>
+          </article>
+
+        </div>
+
+        <!-- Mensagem exibida quando a pesquisa não encontra resultados -->
+        <p class="mensagem-vazia" id="mensagemVazia" hidden>
+          Nenhuma scooter encontrada. Tente outro nome.
+        </p>
+
+        <!-- Propaganda -->
+        <aside class="propaganda">
+          <span>(propaganda)</span>
+
+          <strong>"voce quer comprar a sua scooter?"</strong>
+
+          <b>"venha na Massolini scooters!"</b>
+        </aside>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- Lista de tarefas e o auxiliar -->
+  <section class="ferramentas" aria-label="Ferramentas">
+
+    <!-- Lista de tarefas -->
+    <div class="bloco-ferramenta">
+      <h2>Lista de tarefa</h2>
+
+      <form class="linha-form" id="formTarefa">
+        <input
+          id="campoTarefa"
+          type="text"
+          placeholder="escreva uma tarefa..."
+          maxlength="120"
+          aria-label="Nova tarefa"
+        >
+
+        <button class="botao-simples" type="submit" aria-label="Adicionar tarefa">
+          +
+        </button>
+      </form>
+
+      <ul class="lista-tarefas" id="listaTarefas"></ul>
+    </div>
+
+    <!-- Auxiliar de IA demonstrativo -->
+    <div class="bloco-ferramenta">
+      <h2>Auxiliar de IA</h2>
+
+      <div class="conversa" id="conversa" aria-live="polite">
+        <p class="fala">
+          Olá! Posso responder dúvidas sobre os modelos exibidos.
+        </p>
+      </div>
+
+      <form class="linha-form" id="formPergunta">
+        <input
+          id="campoPergunta"
+          type="text"
+          placeholder="escreva sua dúvida..."
+          aria-label="Sua dúvida"
+        >
+
+        <button class="botao-simples" type="submit">
+          Enviar
+        </button>
+      </form>
+
+      <small class="aviso-demo">
+        Auxiliar demonstrativo: não é uma inteligência artificial conectada.
+      </small>
+    </div>
+
+  </section>
+
+  <!-- Botão de suporte -->
+  <button
+    class="botao-suporte-flutuante"
+    type="button"
+    data-acao="suporte"
+    aria-label="Abrir suporte"
+  >
+    !
+  </button>
+
+  <!-- Janela para menus, cadastro e informações -->
+  <div class="fundo-modal" id="fundoModal" aria-hidden="true">
+
+    <section
+      class="janela-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="tituloModal"
+    >
+
+      <button class="fechar-modal" type="button" aria-label="Fechar">
+        ×
+      </button>
+
+      <div id="conteudoModal"></div>
+
+    </section>
+  </div>
+
+</body>
+</html>
